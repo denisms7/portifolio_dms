@@ -112,7 +112,8 @@
                     </h1>
                 </header>
                 <p>Nesta página eu demonstro minhas habilidades de resolver problemas de negócio
-                    utilizando conceitos e ferramentas da Ciência de Dados e Programação Web, através de projetos com dados
+                    utilizando conceitos e ferramentas da Ciência de Dados e Programação Web, através de projetos com
+                    dados
                     públicos.<br>
                     Você vai encontrar também minhas experiências profissionais, habilidades,
                     ferramentas e conceitos.<br>
@@ -188,7 +189,8 @@
                             <li>Técnicas de balanceamento dos dados, seleção de atributos e redução de
                                 dimensionalidade - Em estudo</li>
                             <li>Métricas de performance dos algoritmos (RMSE, MAE, MAPE, Confusion Matrix,
-                                Precisão, Recall, Curva ROC, Curva Lift, AUC, Silhouette Score, DB-Index) - Em estudo</li>
+                                Precisão, Recall, Curva ROC, Curva Lift, AUC, Silhouette Score, DB-Index) - Em estudo
+                            </li>
                             <li>Pacotes de Machine Learning: Sklearn e Scipy - Em estudo</li>
                         </ul>
                     </div>
@@ -233,10 +235,11 @@
                             <h5 class="card-title text-uppercase">Valor Bruto da Produção</h5>
                             <p class="card-text">Dashboard web interativo para análise do <abbr
                                     title="Valor Bruto da Produção">VBP</abbr> municipal, desenvolvido a pedido da
-                                Controladoria do município de <a href="https://www.centenariodosul.pr.gov.br" target="_blank">Centenário
+                                Controladoria do município de <a href="https://www.centenariodosul.pr.gov.br"
+                                    target="_blank">Centenário
                                     do Sul-PR</a>.<br>
-                                Base de dados disponibilizada pela <a
-                                    href="https://www.agricultura.pr.gov.br/vbp" target="_blank">Secretaria de Agricultura e
+                                Base de dados disponibilizada pela <a href="https://www.agricultura.pr.gov.br/vbp"
+                                    target="_blank">Secretaria de Agricultura e
                                     Abastecimento</a>.<br>
                                 Projeto Web responsivo para dispositivos moveis e computadores. </p>
                             Ferramentas Utilizadas:
@@ -305,11 +308,13 @@
 
                 <div class=" col-sm-6">
                     <div class="card mb-3 border-0">
-                        <img src="https://user-images.githubusercontent.com/82631808/218283236-a1b0e8f4-6e10-4eff-88ff-d7b2a23b119f.png" class="card-img-top" alt="Banner">
+                        <img src="https://user-images.githubusercontent.com/82631808/218283236-a1b0e8f4-6e10-4eff-88ff-d7b2a23b119f.png"
+                            class="card-img-top" alt="Banner">
                         <div class="card-body">
                             <h5 class="card-title text-uppercase">Sistema de Cadastro</h5>
                             <p class="card-text">
-                                Sistema de cadastro de Pessoa Física e Jurídica feito em Django para uso em sistemas diversos e/ou modelos.
+                                Sistema de cadastro de Pessoa Física e Jurídica feito em Django para uso em sistemas
+                                diversos e/ou modelos.
                             </p>
                             Ferramentas Utilizadas:
                             <ul>
@@ -369,7 +374,8 @@
             </header>
             <div class="row">
                 <p class="col-sm-12 mt-2">
-                    Tenho 27 anos. Sou pedagogo por formação, mas atuo como funcionário público, na área de TI. <br>
+                    Tenho <span id="id_idade"></span> anos. Sou pedagogo por formação, mas atuo como funcionário
+                    público, na área de TI. <br>
                     Sou curioso e esforçado, sempre procurando novos campos de conhecimento para explorar.
                     Autodidata, aprendo novas coisas com muita facilidade. <br>
                     Sei tocar 6 instrumentos musicais e sou amante de café. Estou sempre me atualizando em todos os
@@ -510,12 +516,40 @@
 
     </div>
 
-    
+
     <!-- ============================================================================================================= -->
     <!-- RODAPE  -->
     <footer class="text-center m-1 text-muted">
         Desenvolvido por Denis Muniz Silva - 2022
     </footer>
+
+
+
+    <script>
+        function idade(ano_aniversario, mes_aniversario, dia_aniversario) {
+            var d = new Date,
+                ano_atual = d.getFullYear(),
+                mes_atual = d.getMonth() + 1,
+                dia_atual = d.getDate(),
+
+                ano_aniversario = +ano_aniversario,
+                mes_aniversario = +mes_aniversario,
+                dia_aniversario = +dia_aniversario,
+
+                quantos_anos = ano_atual - ano_aniversario;
+
+            if (mes_atual < mes_aniversario || mes_atual == mes_aniversario && dia_atual < dia_aniversario) {
+                quantos_anos--;
+            }
+
+            return quantos_anos < 0 ? 0 : quantos_anos;
+        }
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            document.getElementById("id_idade").innerHTML = idade(1995, 05, 06)
+        });
+    </script>
+    
 </body>
 
 </html>
