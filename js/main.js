@@ -24,8 +24,17 @@ function fano() {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    document.getElementById("id_ano").innerHTML = fano();
-    document.getElementById("id_idade").innerHTML = idade(1995, 5, 6);
+    try {
+        document.getElementById("id_idade").innerHTML = idade(1995, 5, 6);
+    }  catch {
+
+    }
+
+    try {
+        document.getElementById("id_ano").innerHTML = fano();
+    } catch {
+        
+    }
 });
 
 
