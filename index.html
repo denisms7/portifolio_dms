@@ -12,21 +12,9 @@
     <title>Denis Muniz Silva</title>
 
     <link rel="icon" href="./imagens/icon.ico">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,800&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS only - Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <!-- JavaScript Bundle with Popper - Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
 
     <!-- Icones - Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -40,15 +28,14 @@
     <meta property="og:url" content="https://denisms7.github.io/portifolio_dms/">
     <meta property="og:image" content="imagens/denis.png">
     <meta property="og:description" content="Portifólio de Projetos de Denis Muniz Silva">
-    <meta name="theme-color" content="#FF0000">
 
 </head>
 
 
-<body class="bg-light text-muted" style="font-family: 'Open Sans', sans-serif;">
+<body class="text-muted">
     <span id="topo"></span>
 
-    <div class="container-md" style="background-color: white;">
+    <div class="container-md">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="nav-link active" aria-current="page" href="#"><b>INICIO</b></a>
@@ -57,31 +44,35 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
                             <a class="nav-link" href="certificados.html">DOCUMENTOS</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="#habilidades">HABILIDADE</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="#projetos">PROJETOS</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="#sobre">SOBRE</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="#contato">CONTATO</a>
                         </li>
-
-
                     </ul>
-
-                    <ul class="d-flex navbar-nav my-lg-0 " style="--bs-scroll-height: 100px;">
+                    <ul class="d-flex navbar-nav my-lg-0 ">
+                        <li class="navbar-item">
+                            <button class="btn me-3" type="button" onclick="CapTheme()" id="current-theme" title="Tema">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                                    <path
+                                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+                                </svg>
+                            </button>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle d-none" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -100,8 +91,7 @@
     </div>
 
 
-    <div class="container-md rounded-bottom p-5" style="background-color: white;">
-
+    <div class="container-md rounded-bottom p-5">
         <!-- ============================================================================================================= -->
         <!-- CABECALHO -->
         <div class="row">
@@ -154,10 +144,12 @@
                         <h3>Linguagens de Programação e Marcação</h3>
                         <ul>
                             <li><a href="https://www.python.org/" target="_blank">Python</a></li>
-                            <li><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>, <a
+                                    href="https://www.typescriptlang.org/" target="_blank">TypeScript</a></li>
                             <li><a href="https://www.w3.org/MarkUp/html3/intro.html" target="_blank">HTML 3.0</a></li>
                             <li><a href="https://pt.wikipedia.org/wiki/CSS3" target="_blank">CSS3</a></li>
-                            <li><a href="https://support.microsoft.com/pt-br/office/introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-do-access-92eb616b-3204-4121-9277-70649e33be4f#bmlearnaboutvba" target="_blank">VBA (Microsoft Access) </a></li>
+                            <li><a href="https://support.microsoft.com/pt-br/office/introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-do-access-92eb616b-3204-4121-9277-70649e33be4f#bmlearnaboutvba"
+                                    target="_blank">VBA (Microsoft Access) </a></li>
                         </ul>
                     </div>
                 </div>
@@ -167,14 +159,22 @@
                     <div class="">
                         <h3>Framework's, Automação de tarefas e boas práticas</h3>
                         <ul>
-                            <li><a href="https://palletsprojects.com/p/flask/" target="_blank">Flask</a>, <a href="https://www.djangoproject.com/" target="_blank">Django</a>, <a href="https://plotly.com/dash/" target="_blank">Dash</a></li>
-                            <li><a href="https://vuejs.org/" target="_blank">VueJS</a>, <a href="https://react.dev/" target="_blank">React</a></li>
-                            <li><a href="https://getbem.com/" target="_blank">BEM</a>, <a href="http://smacss.com/" target="_blank">SMACSS</a></li>
-                            <li><a href="https://sass-lang.com/" target="_blank">SASS</a>, <a href="https://lesscss.org/" target="_blank">LESS</a>, <a href="https://parceljs.org/" target="_blank">Parcel</a></li>
-                            <li><a href="https://gulpjs.com/" target="_blank">Gulp</a>, <a href="https://gruntjs.com/" target="_blank">Grunt</a></li>
+                            <li><a href="https://palletsprojects.com/p/flask/" target="_blank">Flask</a>, <a
+                                    href="https://www.djangoproject.com/" target="_blank">Django</a>, <a
+                                    href="https://plotly.com/dash/" target="_blank">Dash</a></li>
+                            <li><a href="https://vuejs.org/" target="_blank">VueJS</a>, <a href="https://react.dev/"
+                                    target="_blank">React</a></li>
+                            <li><a href="https://getbem.com/" target="_blank">BEM</a>, <a href="http://smacss.com/"
+                                    target="_blank">SMACSS</a></li>
+                            <li><a href="https://sass-lang.com/" target="_blank">SASS</a>, <a
+                                    href="https://lesscss.org/" target="_blank">LESS</a>, <a
+                                    href="https://parceljs.org/" target="_blank">Parcel</a></li>
+                            <li><a href="https://gulpjs.com/" target="_blank">Gulp</a>, <a href="https://gruntjs.com/"
+                                    target="_blank">Grunt</a></li>
                             <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
-                            <li><a href="https://jquery.com/" target="_blank">jQuery</a>, <a href="https://262.ecma-international.org/6.0/">ECMAScript 6</a></li>
-                            
+                            <li><a href="https://jquery.com/" target="_blank">jQuery</a>, <a
+                                    href="https://262.ecma-international.org/6.0/">ECMAScript 6</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -342,8 +342,7 @@
 
                 <div class=" col-sm-6">
                     <div class="card mb-3 border-0">
-                        <img src="imagens/cadastro.png"
-                            class="card-img-top" alt="Banner">
+                        <img src="imagens/cadastro.png" class="card-img-top" alt="Banner">
                         <div class="card-body">
                             <h5 class="card-title text-uppercase">Sistema de Cadastro</h5>
                             <p class="card-text">
@@ -550,40 +549,12 @@
 
     </div>
 
-
-    <!-- ============================================================================================================= -->
-    <!-- RODAPE  -->
     <footer class="text-center m-1 text-muted">
-        Desenvolvido por Denis Muniz Silva - 2022
+        Desenvolvido por Denis Muniz Silva - <span id="id_ano"></span>
     </footer>
 
-
-
-    <script>
-        function idade(ano_aniversario, mes_aniversario, dia_aniversario) {
-            var d = new Date,
-                ano_atual = d.getFullYear(),
-                mes_atual = d.getMonth() + 1,
-                dia_atual = d.getDate(),
-
-                ano_aniversario = +ano_aniversario,
-                mes_aniversario = +mes_aniversario,
-                dia_aniversario = +dia_aniversario,
-
-                quantos_anos = ano_atual - ano_aniversario;
-
-            if (mes_atual < mes_aniversario || mes_atual == mes_aniversario && dia_atual < dia_aniversario) {
-                quantos_anos--;
-            }
-
-            return quantos_anos < 0 ? 0 : quantos_anos;
-        }
-
-        document.addEventListener("DOMContentLoaded", function (event) {
-            document.getElementById("id_idade").innerHTML = idade(1995, 05, 06)
-        });
-    </script>
-
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
