@@ -6,31 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Denis Muniz Silva">
-    <meta name="description" content="Denis Muniz Silva's Project Portfolio">
+    <meta name="description" content="Portifólio de Projetos de Denis Muniz Silva">
     <meta name="keywords"
-        content="data analysis, data science, Denis Muniz Silva, project portfolio, portfolio">
+        content="analise de dados, ciência de dados, Denis Muniz Silva, portifólio de projetos, portifólio">
     <title>Denis Muniz Silva</title>
 
     <link rel="icon" href="./imagens/icon.ico">
-    
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,800&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 
-    <!-- CSS only - Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <!-- JavaScript Bundle with Popper - Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
 
     <!-- Icones - Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-
 
     <!-- para o Twitter Card -->
     <meta name="twitter:card" value="summary">
@@ -38,17 +25,15 @@
     <!-- para o sistema Open Graph -->
     <meta property="og:title" content="Denis Muniz Silva">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://denisms7.github.io/portifolio_dms">
+    <meta property="og:url" content="https://denisms7.github.io/portifolio_dms/">
     <meta property="og:image" content="imagens/denis.png">
-    <meta property="og:description" content="Denis Muniz Silva's Project Portfolio">
-    <meta name="theme-color" content="#FF0000">
-
+    <meta property="og:description" content="Portifólio de Projetos de Denis Muniz Silva">
 
 </head>
 
 
 <body class="bg-light text-muted" style="font-family: 'Open Sans', sans-serif;">
-<span  id="topo"></span>
+    <span id="topo"></span>
 
     <div class="container-md" style="background-color: white;">
         <nav class="navbar navbar-expand-lg">
@@ -87,7 +72,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                    IDIOMA
+                                IDIOMA
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="index.html">Português-Br</a></li>
@@ -176,8 +161,10 @@
                             <li>Descriptive statistics (location, dispersion, asymmetry, kurtosis, density)
                             </li>
                             <li>Regression, classification, clustering and "learn to rank" algorithms</li>
-                            <li>Data balancing, attribute selection and dimensionality reduction techniques - In study</li>
-                            <li>Algorithm performance metrics (RMSE, MAE, MAPE, Confusion Matrix, Precision, Recall, ROC Curve, Lift Curve, AUC, Silhouette Score, DB-Index) - In study</li>
+                            <li>Data balancing, attribute selection and dimensionality reduction techniques - In study
+                            </li>
+                            <li>Algorithm performance metrics (RMSE, MAE, MAPE, Confusion Matrix, Precision, Recall, ROC
+                                Curve, Lift Curve, AUC, Silhouette Score, DB-Index) - In study</li>
                             <li>Machine Learning Packages: Sklearn and Scipy. - In study</li>
                         </ul>
                     </div>
@@ -224,14 +211,16 @@
                         <div class="card-body">
                             <h5 class="card-title text-uppercase">Gross Value of Production</h5>
                             <p class="card-text">Interactive web dashboard for analyzing the <abbr
-                                    title="Valor Bruto da Produção">VBP</abbr> municipality, developed at the request of the
-                                    Comptroller of the Municipality of <a href="https://www.centenariodosul.pr.gov.br" target="_blank">Centenário
+                                    title="Valor Bruto da Produção">VBP</abbr> municipality, developed at the request of
+                                the
+                                Comptroller of the Municipality of <a href="https://www.centenariodosul.pr.gov.br"
+                                    target="_blank">Centenário
                                     do Sul-PR</a>.<br>
-                                    Database provided by <a
-                                    href="https://www.agricultura.pr.gov.br/vbp" target="_blank">Secretaria de Agricultura e
+                                Database provided by <a href="https://www.agricultura.pr.gov.br/vbp"
+                                    target="_blank">Secretaria de Agricultura e
                                     Abastecimento</a>.<br>
-                                    Responsive web design for mobile devices and computers. </p>
-                                    Tools Used:
+                                Responsive web design for mobile devices and computers. </p>
+                            Tools Used:
                             <ul>
                                 <li>Python - Matrix language used</li>
                                 <li>Dash - Flask based web framework</li>
@@ -477,12 +466,15 @@
 
     </div>
 
-    
+
     <!-- ============================================================================================================= -->
     <!-- RODAPE  -->
     <footer class="text-center m-1 text-muted">
-        Developed by Denis Muniz Silva - 2022
+        Developed by Denis Muniz Silva - <span id="id_ano"></span>
     </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
