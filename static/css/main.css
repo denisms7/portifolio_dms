@@ -1,3 +1,21 @@
 * {
     font-family: sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar .nav-link.active {
+    font-weight: 600;
+    color: var(--bs-primary) !important;
+}
+
+
+[data-bs-theme="dark"] .navbar .nav-link {
+  color: var(--bs-gray-300);
+}
+[data-bs-theme="dark"] .navbar .nav-link.active {
+  color: var(--bs-light);
+  border-bottom-color: var(--bs-light);
+}
