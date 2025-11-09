@@ -11,7 +11,6 @@ html {
     color: var(--bs-primary) !important;
 }
 
-
 [data-bs-theme="dark"] .navbar .nav-link {
   color: var(--bs-gray-300);
 }
