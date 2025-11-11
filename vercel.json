@@ -4,5 +4,15 @@
         "env": {
             "NODE_VERSION": "18"
         }
-    }
+    },
+    "framework": null,
+    "routes": [
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/.*",
+            "dest": "/index.html"
+        }
+    ]
 }
