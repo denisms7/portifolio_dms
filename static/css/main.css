@@ -6,14 +6,14 @@ html {
     scroll-behavior: smooth;
 }
 
-.text-bg-purple {
-    color: #fff !important;
-    background-color: #8b5cf6 !important;
+.text-bg-soft {
+    background-color: #A370F7 !important;
+    color: #ffffff !important;
 }
 
 .text-bg-hard {
-    color: #fff !important;
-    background-color: #0f4c75 !important;
+    background-color: #b6f4df !important;
+    color: #064e3b !important;
 }
 
 .navbar .nav-link.active {
