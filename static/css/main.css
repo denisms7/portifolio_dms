@@ -6,6 +6,16 @@ html {
     scroll-behavior: smooth;
 }
 
+.text-bg-purple {
+    color: #fff !important;
+    background-color: #8b5cf6 !important;
+}
+
+.text-bg-hard {
+    color: #fff !important;
+    background-color: #0f4c75 !important;
+}
+
 .navbar .nav-link.active {
     font-weight: 600;
     color: var(--bs-primary) !important;
