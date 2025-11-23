@@ -22,9 +22,21 @@ html {
 }
 
 [data-bs-theme="dark"] .navbar .nav-link {
-  color: var(--bs-gray-300);
+    color: var(--bs-gray-300);
 }
 [data-bs-theme="dark"] .navbar .nav-link.active {
-  color: var(--bs-light);
-  border-bottom-color: var(--bs-light);
+    color: var(--bs-light);
+    border-bottom-color: var(--bs-light);
+}
+
+
+@media (max-width: 576px) {
+    .table td,
+    .table th {
+        padding: 0.5rem 0.4rem;
+    }
+
+    .table thead {
+        font-size: 0.78rem;
+    }
 }
