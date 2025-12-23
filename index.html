@@ -414,8 +414,15 @@
                             <ul>
                                 <li>Python - Linguagem matriz utilizada</li>
                                 <li>Pandas - Análise de dados</li>
-                                <li>Jupyter Notebook - <abbr
-                                        title="IDE, do inglês Integrated Development Environment ou Ambiente de Desenvolvimento Integrado">IDE</abbr>
+                                <li>Jupyter Notebook - 
+                                    <span
+                                        class="text-decoration-underline"
+                                        data-bs-toggle="tooltip"
+                                        data-bs-placement="auto"
+                                        title="IDE, do inglês Integrated Development Environment ou Ambiente de Desenvolvimento Integrado"
+                                        >
+                                        IDE
+                                    </span>
                                 </li>
                                 <li>Anaconda - Ambiente de Trabalho</li>
                             </ul>
@@ -430,7 +437,17 @@
                     <div class="card mb-3 border-0">
                         <img src="static/img/portifolio/cadastro.png" class="card-img-top" alt="Banner">
                         <div class="card-body">
-                            <h5 class="card-title text-uppercase">Sistema de Cadastro</h5>
+                            <h5 class="card-title text-uppercase">Sistema de Cadastro
+                                <span
+                                    class="text-decoration-underline"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="auto"
+                                    title="Create (Criar), Read (Ler), Update (Atualizar) e Delete (Deletar)"
+                                    >
+                                    CRUD
+                                </span>
+
+                            </h5>
                             <p class="card-text">
                                 Sistema de cadastro de Pessoa Física e Jurídica feito em Django para uso em sistemas
                                 diversos e/ou modelos.
@@ -550,7 +567,7 @@
                             <td data-order="20090000">2009</td>
                             <td>Escola Municipal Irmã Osmunda<br>Colégio Estadual Padre José Pires</td>
                             <td>Ensino Fundamental Completo</td>
-                            <td class="text-center">6532</td>
+                            <td class="text-center ch-Formal">6532</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_formal/Ensino_Fundamental.pdf"
                                     class="btn btn-outline-secondary disabled" target="_blank">
@@ -562,7 +579,7 @@
                             <td data-order="20120000">2012</td>
                             <td>Colégio Estadual Padre José Pires</td>
                             <td>Ensino Médio Completo</td>
-                            <td class="text-center">2632</td>
+                            <td class="text-center ch-Formal">2632</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_formal/Ensino_Medio.pdf" class="btn btn-outline-secondary disabled"
                                     target="_blank">
@@ -574,7 +591,7 @@
                             <td data-order="20181109">2018</td>
                             <td>UNINTER</td>
                             <td>Curso Superior de Licenciatura em Pedagogia</td>
-                            <td class="text-center">3360</td>
+                            <td class="text-center ch-Formal">3360</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_formal/UNINTER-Certificado_Denis_Muniz_Silva.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -586,7 +603,7 @@
                             <td data-order="20251202">2025</td>
                             <td>Colégio Técnico GlobalTec</td>
                             <td>Técnico em Administração</td>
-                            <td class="text-center">1200</td>
+                            <td class="text-center ch-Formal">1200</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_formal/GlobalTec-Tecnico_em_Administracao.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -600,7 +617,7 @@
                             <td>Faculdade Líbano</td>
                             <td>MBA - Finanças, Auditoria e Controladoria <span class="badge text-bg-warning">Em
                                     Andamento</span></td>
-                            <td class="text-center">720</td>
+                            <td class="text-center ch-Formal">720</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_formal/Líbano-MBA-Em-Finanças-Auditoria-e-Controladoria.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -612,7 +629,7 @@
                             <td data-order="20260000">2026</td>
                             <td>Faculdade Líbano</td>
                             <td>MBA - Análise de Dados <span class="badge text-bg-warning">Em Andamento</span></td>
-                            <td class="text-center">720</td>
+                            <td class="text-center ch-Formal">720</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_formal/Líbano-MBA-em-Análise-de-Dados.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -625,7 +642,7 @@
                             <td data-order="20270000">2027</td>
                             <td><span class="placeholder w-75"></span></td>
                             <td>Gestão Publica <span class="badge text-bg-secondary">A Iniciar</span></td>
-                            <td class="text-center">-</td>
+                            <td class="text-center ch-Formal">-</td>
                             <td class="text-end">
                                 <a href="#" class="btn btn-secondary disabled" target="_blank" aria-disabled="true">
                                     <div class="spinner-border spinner-border-sm" role="status">
@@ -637,11 +654,16 @@
                     </tbody>
                 </table>
             </div>
-            <p class="text-end small fw-light">
-                Todos os documentos da sessão acima podem ser validados em
-                <a href="https://emec.mec.gov.br/emec/nova" target="_blank">e-MEC</a> e/ou
-                <a href="https://sistec.mec.gov.br/" target="_blank">SISTEC</a>.
-            </p>
+            <div class="row">
+                <div class="col-12 col-md-6 small fw-light text-start">
+                    Documentos da sessão acima podem ser validados em
+                    <a href="https://emec.mec.gov.br/emec/nova" target="_blank">e-MEC</a> e/ou
+                    <a href="https://sistec.mec.gov.br/" target="_blank">SISTEC</a>.
+                </div>
+                <div class="col-12 col-md-6 small fw-light text-end">
+                    Total de <span id="ch-Formal-total"></span> horas em estudos formais.
+                </div>
+            </div>
 
             <p class="lead text-secondary my-3">
                 <i class="bi bi-caret-right-fill"></i>
@@ -666,7 +688,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Faculdade Pólis Civitas</td>
                             <td>Programa em Governança Municipal</td>
-                            <td class="text-center cargo-horaria">330</td>
+                            <td class="text-center ch-informal">330</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/polis-civitas-adm_publica.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -679,7 +701,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Asimov Academy</td>
                             <td>Python Starter</td>
-                            <td class="text-center cargo-horaria">11</td>
+                            <td class="text-center ch-informal">11</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Python-Starter.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -692,7 +714,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Asimov Academy</td>
                             <td>Analisando Dados com Pandas</td>
-                            <td class="text-center cargo-horaria">04</td>
+                            <td class="text-center ch-informal">04</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Analisando-Dados-com-Pandas.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -705,7 +727,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>André Dias da Silva</td>
                             <td>Pias Esculpidas em Porcelanato</td>
-                            <td class="text-center cargo-horaria">-</td>
+                            <td class="text-center ch-informal">-</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/pias-esculpidas.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -718,7 +740,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Adrian Sacomani</td>
                             <td>Adobe Premiere - Edição de vídeo nivel avançado</td>
-                            <td class="text-center cargo-horaria">24</td>
+                            <td class="text-center ch-informal">24</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Sacomani_Adobe-Premiere.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -731,7 +753,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Adrian Sacomani</td>
                             <td>Adobe Photoshop - Edição de fotos nivel avançado</td>
-                            <td class="text-center cargo-horaria">20</td>
+                            <td class="text-center ch-informal">20</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Sacomani_Adobe-Photoshop.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -744,7 +766,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>PycodeBR</td>
                             <td>Django Master - Aplicações Web com Python e Django</td>
-                            <td class="text-center cargo-horaria">45</td>
+                            <td class="text-center ch-informal">45</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/PycodeBR_Django_Master1.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -757,7 +779,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>PycodeBR</td>
                             <td>Django Master - APIs Modernas com Python e Django</td>
-                            <td class="text-center cargo-horaria">18</td>
+                            <td class="text-center ch-informal">18</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/PycodeBR_Django_Master2.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -770,7 +792,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>PycodeBR</td>
                             <td>Django Master - Arquitetura e Modelagem de Sistemas Modernos</td>
-                            <td class="text-center cargo-horaria">21</td>
+                            <td class="text-center ch-informal">21</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/PycodeBR_Django_Master3.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -783,7 +805,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>PycodeBR</td>
                             <td>Django Master - Integrações de Sistemas e APIs com Python</td>
-                            <td class="text-center cargo-horaria">15</td>
+                            <td class="text-center ch-informal">15</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/PycodeBR_Integration_Master.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -795,8 +817,17 @@
                             <td data-order="20251110">2025</td>
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Curso em Video</td>
-                            <td><abbr title="HyperText Markup Language">HTML5</abbr></td>
-                            <td class="text-center cargo-horaria">40</td>
+                            <td>
+                                <span
+                                    class="text-decoration-underline"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="auto"
+                                    title="HyperText Markup Language"
+                                    >
+                                    HTML5
+                                </span>
+                            </td>
+                            <td class="text-center ch-informal">40</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Curso-em-Video-HTML5.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -809,7 +840,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Curso em Video</td>
                             <td>Microsoft Excel</td>
-                            <td class="text-center cargo-horaria">40</td>
+                            <td class="text-center ch-informal">40</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Curso-em-Video-Excel.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -822,7 +853,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Santander Academy</td>
                             <td>Microsoft Excel</td>
-                            <td class="text-center cargo-horaria">08</td>
+                            <td class="text-center ch-informal">08</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Santander-Open-Academy-Excel.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -835,7 +866,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Santander Academy</td>
                             <td>Fundamentos do ChatGPT</td>
-                            <td class="text-center cargo-horaria">08</td>
+                            <td class="text-center ch-informal">08</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Santander-Open-Academy-Fundamentos-do-ChatGPT.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -846,9 +877,18 @@
                         <tr>
                             <td data-order="20251116">2025</td>
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
-                            <td><abbr title="Tribunal de Contas do Estado do Paraná">TCE-PR</abbr></td>
+                            <td>
+                                <span
+                                    class="text-decoration-underline"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="auto"
+                                    title="Tribunal de Contas do Estado do Paraná"
+                                    >
+                                    TCE-PR
+                                </span>
+                            </td>
                             <td>Formação de Conselheiros Municipais</td>
-                            <td class="text-center cargo-horaria">03</td>
+                            <td class="text-center ch-informal">03</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/TCE-PR_Conselheiros_Municipais.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -860,9 +900,18 @@
                         <tr>
                             <td data-order="20251118">2025</td>
                             <td class="text-center"><span class="badge text-bg-soft">Soft Skills</span></td>
-                            <td><abbr title="Tribunal de Contas do Estado do Paraná">TCE-PR</abbr></td>
+                            <td>
+                                <span
+                                    class="text-decoration-underline"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="auto"
+                                    title="Tribunal de Contas do Estado do Paraná"
+                                    >
+                                    TCE-PR
+                                </span>
+                            </td>
                             <td>Despesas de Pessoal - Governança Aplicada à Gestão de Pessoas</td>
-                            <td class="text-center cargo-horaria">03</td>
+                            <td class="text-center ch-informal">03</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Soft_Skills/TCE-PR_Despesas-de-Pessoal-Governança-Aplicada-Gestão-de-Pessoas.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -874,9 +923,18 @@
                         <tr>
                             <td data-order="20251118">2025</td>
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
-                            <td><abbr title="Tribunal de Contas do Estado do Paraná">TCE-PR</abbr></td>
+                            <td>
+                                <span
+                                    class="text-decoration-underline"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="auto"
+                                    title="Tribunal de Contas do Estado do Paraná"
+                                    >
+                                    TCE-PR
+                                </span>
+                            </td>
                             <td>Aposentadorias no Regime Próprio de Previdência</td>
-                            <td class="text-center cargo-horaria">03</td>
+                            <td class="text-center ch-informal">03</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/TCE-PR_Aposentadorias-no-Regime-Próprio-de-Previdência.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -888,9 +946,14 @@
                             <td data-order="20251116">2025</td>
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Labora Digital</td>
-                            <td>Workshop <abbr title="Estudo Técnico Preliminar">ETP</abbr> com <abbr
-                                    title="Inteligência Artificial">IA</abbr> na Prática</td>
-                            <td class="text-center cargo-horaria">04</td>
+                            <td>Workshop 
+                                <span class="text-decoration-underline"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="auto"
+                                    title="Estudo Técnico Preliminar">
+                                    ETP</span> com Inteligência Artificial na Prática
+                            </td>
+                            <td class="text-center ch-informal">04</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Labora-Digital_ETP-com-IA.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -903,7 +966,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Julio Battisti</td>
                             <td>TCP/IP - Teoria e Prática em Redes Windows</td>
-                            <td class="text-center cargo-horaria">20</td>
+                            <td class="text-center ch-informal">20</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Julio-Battisti-TCP-IP-Windows.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -916,7 +979,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Asimov Academy</td>
                             <td>Python Starter (Atualização)</td>
-                            <td class="text-center cargo-horaria">22</td>
+                            <td class="text-center ch-informal">22</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Python-Starter_2.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -929,7 +992,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Asimov Academy</td>
                             <td>Gráficos Interativos com <a href="https://plotly.com" target="_blank">Plotly</a></td>
-                            <td class="text-center cargo-horaria">03</td>
+                            <td class="text-center ch-informal">03</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Gráficos-Interativos-com-Plotly.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -942,7 +1005,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Asimov Academy</td>
                             <td>Analisando Dados com Pandas & SQL</td>
-                            <td class="text-center cargo-horaria">12</td>
+                            <td class="text-center ch-informal">12</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Analisando-Dados-com-Pandas-e-SQL.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -955,7 +1018,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Asimov Academy</td>
                             <td>Lendo e Enviando Emails com Python</td>
-                            <td class="text-center cargo-horaria">06</td>
+                            <td class="text-center ch-informal">06</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Lendo-e-Enviando-Emails.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -968,7 +1031,7 @@
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
                             <td>Asimov Academy</td>
                             <td>Dashboards com Dash</td>
-                            <td class="text-center cargo-horaria">24</td>
+                            <td class="text-center ch-informal">24</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Dashboards-com-Dash.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -981,7 +1044,7 @@
                             <td class="text-center"><span class="badge text-bg-soft">Soft Skills</span></td>
                             <td>Faculdade Líbano</td>
                             <td>Comunicação Assertiva</td>
-                            <td class="text-center cargo-horaria">02</td>
+                            <td class="text-center ch-informal">02</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Comunicação Assertiva - Líbano.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -994,7 +1057,7 @@
                             <td class="text-center"><span class="badge text-bg-soft">Soft Skills</span></td>
                             <td>Faculdade Líbano</td>
                             <td>Conduta Profissional</td>
-                            <td class="text-center cargo-horaria">02</td>
+                            <td class="text-center ch-informal">02</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Conduta Profissional - Líbano.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -1007,7 +1070,7 @@
                             <td class="text-center"><span class="badge text-bg-soft">Soft Skills</span></td>
                             <td>Faculdade Líbano</td>
                             <td>Flexibilidade</td>
-                            <td class="text-center cargo-horaria">02</td>
+                            <td class="text-center ch-informal">02</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Flexibilidade - Líbano.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -1020,7 +1083,7 @@
                             <td class="text-center"><span class="badge text-bg-soft">Soft Skills</span></td>
                             <td>Faculdade Líbano</td>
                             <td>Liderança e Resultados</td>
-                            <td class="text-center cargo-horaria">02</td>
+                            <td class="text-center ch-informal">02</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Liderança e Resultados - Líbano.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -1033,7 +1096,7 @@
                             <td class="text-center"><span class="badge text-bg-soft">Soft Skills</span></td>
                             <td>Faculdade Líbano</td>
                             <td>Resiliência</td>
-                            <td class="text-center cargo-horaria">02</td>
+                            <td class="text-center ch-informal">02</td>
                             <td class="text-end">
                                 <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Resiliência - Líbano.pdf"
                                     class="btn btn-primary" target="_blank">
@@ -1045,10 +1108,19 @@
                         <tr>
                             <td data-order="">-</td>
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
-                            <td><abbr title="Escola Nacional de Administração Pública">ENAP</abbr></td>
+                            <td>
+                                <span
+                                    class="text-decoration-underline"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="auto"
+                                    title="Escola Nacional de Administração Pública"
+                                    >
+                                    ENAP
+                                </span>
+                            </td>
                             <td>Soluções Preditivas Baseadas em Dados com o Uso do R e do Python
                                 <span class="badge text-bg-warning">Em Andamento</span></td>
-                            <td class="text-center cargo-horaria">25</td>
+                            <td class="text-center ch-informal">25</td>
                             <td class="text-end">
                                 <a href="#" class="btn btn-primary disabled" target="_blank">
                                     <div class="spinner-border spinner-border-sm" role="status">
@@ -1062,12 +1134,23 @@
                         <tr>
                             <td data-order="">-</td>
                             <td class="text-center"><span class="badge text-bg-hard">Hard Skills</span></td>
-                            <td><abbr title="Tribunal de Contas do Estado do Paraná">TCE-PR</abbr></td>
-                            <td>Pesquisa de Preços em Aquisição de Bens e Serviços de <abbr
-                                    title="Tecnologia da Informação e Comunicação">TIC</abbr> <span
-                                    class="badge text-bg-warning">Em
-                                    Andamento</span></td>
-                            <td class="text-center cargo-horaria">09</td>
+                            <td>                                <span
+                                    class="text-decoration-underline"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="auto"
+                                    title="Tribunal de Contas do Estado do Paraná"
+                                    >
+                                    TCE-PR
+                                </span></td>
+                            <td>Pesquisa de Preços em Aquisição de Bens e Serviços de
+
+                                    <span class="text-decoration-underline"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="auto"
+                                    title="Tecnologia da Informação e Comunicação">
+                                    TIC</span> <span class="badge text-bg-warning">Em Andamento</span>
+                            </td>
+                            <td class="text-center ch-informal">09</td>
                             <td class="text-end">
                                 <a href="#" class="btn btn-primary disabled" target="_blank">
                                     <div class="spinner-border spinner-border-sm" role="status">
@@ -1088,7 +1171,7 @@
                 </table>
             </div>
 
-            <p class="text-end small">Total de <span id="total-ch">0</span> horas em cursos informais.</p>
+            <p class="text-end small">Total de <span id="ch-informal-total">0</span> horas em cursos informais.</p>
 
         </section>
 
@@ -1390,6 +1473,16 @@
 
     <script src="./static/js/bootstrap.bundle.min.js"></script>
     <script src="./static/js/main.js"></script>
+
+
+
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltipTriggerList.forEach(
+            tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
+        );
+    </script>
+
 
     <!-- jQuery -->
     <script src="./static/js/jquery-3.7.0.min.js"></script>

@@ -60,8 +60,8 @@ function changeTheme(theme) {
     }
 }
 
-function calcularTotalCH() {
-    const cells = document.querySelectorAll('.cargo-horaria');
+function calcularTotalCHInformal() {
+    const cells = document.querySelectorAll('.ch-informal');
     let total = 0;
 
     cells.forEach((cell) => {
@@ -75,7 +75,28 @@ function calcularTotalCH() {
         }
     });
 
-    document.getElementById('total-ch').textContent = total;
+    document.getElementById('ch-informal-total').textContent = total;
 }
 
-document.addEventListener('DOMContentLoaded', calcularTotalCH);
+document.addEventListener('DOMContentLoaded', calcularTotalCHInformal);
+
+
+function calcularTotalCHFormal() {
+    const cells = document.querySelectorAll('.ch-Formal');
+    let total = 0;
+
+    cells.forEach((cell) => {
+        const texto = cell.textContent.trim().replace(',', '.');
+
+        // Aceita apenas números inteiros ou decimais
+        const ehNumero = /^-?\d+(\.\d+)?$/.test(texto);
+
+        if (ehNumero) {
+            total += parseFloat(texto);
+        }
+    });
+
+    document.getElementById('ch-Formal-total').textContent = total;
+}
+
+document.addEventListener('DOMContentLoaded', calcularTotalCHFormal);
