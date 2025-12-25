@@ -40,3 +40,50 @@ html {
         font-size: 0.78rem;
     }
 }
+
+@media print {
+    @page {
+        margin: 0.5cm;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .nao-imprimir {
+        display: none !important;
+    }
+
+    /* Quebra a página ANTES do elemento */
+    .quebra-antes {
+        page-break-before: always;
+        break-before: page;
+    }
+
+    /* Quebra a página DEPOIS do elemento */
+    .quebra-depois {
+        page-break-after: always;
+        break-after: page;
+    }
+
+    /* Evita quebra dentro do elemento */
+    .nao-quebrar {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        display: block;
+    }
+}
+
+
+@media print {
+    .reduzir-imprimir,
+    table,
+    th,
+    td {
+        font-size: 9pt;
+    }
+
+    th {
+        font-weight: bold;
+    }
+}
