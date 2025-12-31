@@ -67,35 +67,6 @@ Total de **700+ horas** em cursos e certificações nas áreas de:
 - Ferramentas Adobe (Premiere, Photoshop)
 - Excel Avançado
 
-## 💡 Habilidades Técnicas
-
-### Ciência de Dados
-- Análise exploratória de dados
-- Web Scraping
-- Visualização de dados
-- Estatística descritiva
-- Machine Learning (em estudo)
-
-### Desenvolvimento Web
-- Desenvolvimento Full Stack
-- APIs RESTful
-- Responsive Design
-- Arquitetura de sistemas
-
-### Infraestrutura
-- Redes e Windows Server
-- Telefonia VoIP (Grandstream UCM)
-- CFTV-IP ONVIF
-- Home Assistant
-- Projetos elétricos e de rede
-
-## 📊 Estatísticas do Portfólio
-
-- **Anos de experiência na Administração Pública:** 8+ anos
-- **Projetos desenvolvidos:** 10+
-- **Horas em capacitação:** 700+ horas
-- **Certificações:** 30+ certificados
-
 ## 🌐 Acesse o Portfólio Online
 
 Visite meu portfólio completo em: [https://denisms7.github.io/portifolio_dms/](https://denisms7.github.io/portifolio_dms/)
@@ -117,5 +88,3 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 > "Posso não saber a resposta, mas vou até o fim para achar a solução." - Autor desconhecido
 
 **Desenvolvido por Denis Muniz Silva - 2025**
-
-
