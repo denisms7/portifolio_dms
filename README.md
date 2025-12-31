@@ -8,13 +8,14 @@
 
 Este repositório apresenta meu portfólio profissional, desenvolvido com **HTML5**, **CSS3** e **Bootstrap**. O objetivo é reunir projetos que demonstram minha atuação como **programador Python**, **analista de dados** e **servidor público** na área administrativa e de TI.
 
-Aqui você encontrará soluções voltadas para automação, visualização de dados, desenvolvimento web e otimização de processos, refletindo minha experiência em criar ferramentas práticas, eficientes e orientadas à gestão pública.
+Aqui você encontrará soluções voltadas para automação, visualização de dados, desenvolvimento web e otimização de processos, refletindo minha experiência em criar ferramentas práticas e eficientes.
 
 ## 🚀 Tecnologias Utilizadas
 
 ### Linguagens
 - JavaScript
 - HTML5, CSS3
+- Bootstrap
 
 ### Ferramentas e DevOps
 - Git, GitHub
@@ -116,4 +117,5 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 > "Posso não saber a resposta, mas vou até o fim para achar a solução." - Autor desconhecido
 
 **Desenvolvido por Denis Muniz Silva - 2025**
+
 
