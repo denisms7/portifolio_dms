@@ -13,26 +13,12 @@ Aqui você encontrará soluções voltadas para automação, visualização de d
 ## 🚀 Tecnologias Utilizadas
 
 ### Linguagens
-- Python
-- JavaScript / TypeScript
+- JavaScript
 - HTML5, CSS3
-- VBA (Microsoft Access)
-
-### Frameworks e Bibliotecas
-- **Web**: Django, Flask, Dash, Streamlit
-- **Frontend**: Bootstrap, jQuery, VueJS, React
-- **Análise de Dados**: Pandas, NumPy
-- **Visualização**: Matplotlib, Seaborn, Plotly, Tableau
-
-### Bancos de Dados
-- SQL (SQLite, PostgreSQL, MySQL, Oracle)
-- NoSQL (MongoDB, Cassandra)
-- Microsoft Access
 
 ### Ferramentas e DevOps
 - Git, GitHub
-- Docker, Heroku, Vercel, AWS
-- Virtualenv
+- Vercel
 
 ## 💼 Projetos em Destaque
 
@@ -66,15 +52,14 @@ Projeto de análise de dados para responder questionamentos de CEO fictício sob
 
 ## 🎓 Formação Acadêmica
 
-- **MBA em Análise de Dados** - Faculdade Líbano (Em Andamento - 2026)
-- **MBA em Finanças, Auditoria e Controladoria** - Faculdade Líbano (Em Andamento - 2026)
-- **Técnico em Administração** - Colégio Técnico GlobalTec (2025)
-- **Licenciatura em Pedagogia** - UNINTER (2018)
-
+- **MBA em Análise de Dados** - Faculdade Líbano
+- **MBA em Finanças, Auditoria e Controladoria** - Faculdade Líbano
+- **Técnico em Administração** - Colégio Técnico GlobalTec
+- **Licenciatura em Pedagogia** - UNINTER
 ## 📜 Certificações
 
 Total de **700+ horas** em cursos e certificações nas áreas de:
-- Desenvolvimento Python e Django (PycodeBR, Asimov Academy)
+- Desenvolvimento Python e Django
 - Análise de Dados (Pandas, Plotly, Streamlit)
 - Administração Pública (ENAP, TCE-PR)
 - Desenvolvimento Web (HTML5, CSS3, JavaScript)
@@ -131,3 +116,4 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 > "Posso não saber a resposta, mas vou até o fim para achar a solução." - Autor desconhecido
 
 **Desenvolvido por Denis Muniz Silva - 2025**
+
