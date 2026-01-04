@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    color: #333;
+}
+
+
+hr {
+    height: 2px;
+    border: none;
+    background-color: #333;
+    opacity: 0.75;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Coluna Esquerda */
+.left-column {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 25px 35px;
+}
+
+/* Coluna Direita */
+.right-column {
+    width: 280px;
+    background: linear-gradient(180deg, #5FA8B8 0%, #4A8A9A 100%);
+    padding: 25px 20px;
+    color: white;
+}
+
+/* Header */
+.header {
+    margin-bottom: 18px;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #5FA8B8;
+    margin-bottom: 6px;
+}
+
+.title {
+    font-size: 13px;
+    color: #5FA8B8;
+    font-weight: 500;
+}
+
+/* Seções */
+.section {
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #5FA8B8;
+    border: 2px solid #5FA8B8;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.text {
+    margin-bottom: 8px;
+    text-align: justify;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list li {
+    padding-left: 16px;
+    margin-bottom: 5px;
+    position: relative;
+    font-size: 11px;
+}
+
+.list li:before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: #5FA8B8;
+    font-size: 10px;
+}
+
+/* Citação */
+.quote {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center;
+    font-size: 10px;
+    color: #666;
+}
+
+/* Foto */
+.photo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: white;
+    object-fit: cover;
+}
+
+/* Informações de Contato */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.contact-link,
+.contact-text {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    word-break: break-word;
+    line-height: 1.3;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para Impressão */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        height: 297mm;
+        width: 210mm;
+    }
+
+    .left-column {
+        padding: 15px 25px;
+    }
+
+    .right-column {
+        padding: 15px 15px;
+        width: 260px;
+    }
+
+    .header {
+        margin-bottom: 12px;
+    }
+
+    .section {
+        margin-bottom: 12px;
+    }
+
+    .section-title {
+        margin-bottom: 8px;
+    }
+
+    .text {
+        margin-bottom: 6px;
+    }
+
+    .list li {
+        margin-bottom: 4px;
+    }
+
+    .quote {
+        margin-top: 15px;
+    }
+
+    .photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .photo-container {
+        margin-bottom: 15px;
+    }
+
+    .contact-info {
+        gap: 14px;
+    }
+
+    /* Garante que as cores sejam impressas */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Remove margens padrão de impressão */
+    @page {
+        margin: 0;
+        size: A4 portrait;
+    }
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .right-column {
+        width: 100%;
+    }
+
+    .left-column {
+        padding: 30px 20px;
+    }
+
+    .right-column {
+        padding: 30px 20px;
+    }
+}
