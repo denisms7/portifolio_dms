@@ -87,3 +87,15 @@ html {
         font-weight: bold;
     }
 }
+
+/* Corrigir borda arredondada no topo do carousel */
+.carousel-inner {
+    border-top-left-radius: calc(0.375rem - 1px);
+    border-top-right-radius: calc(0.375rem - 1px);
+    overflow: hidden;
+}
+
+.carousel-item:first-child img {
+    border-top-left-radius: calc(0.375rem - 1px);
+    border-top-right-radius: calc(0.375rem - 1px);
+}

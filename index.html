@@ -508,25 +508,69 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-sm-6">
                     <div class="card mb-3 border-0">
-                        <img src="static/img/portifolio/cadastro.png" class="card-img-top" alt="Banner">
+                        <!-- Carousel -->
+                        <div id="carouselCadastro" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active card-img-top">
+                                    <img src="static/img/portifolio/cadastro1.png"
+                                        class="d-block w-100"
+                                        alt="Tela Cadastro 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="static/img/portifolio/cadastro2.png"
+                                        class="d-block w-100"
+                                        alt="Tela Cadastro 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="static/img/portifolio/cadastro3.png"
+                                        class="d-block w-100"
+                                        alt="Tela Cadastro 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="static/img/portifolio/cadastro4.png"
+                                        class="d-block w-100"
+                                        alt="Tela Cadastro 3">
+                                </div>
+                            </div>
+
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselCadastro" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselCadastro" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselCadastro" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselCadastro" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselCadastro"
+                                    data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselCadastro"
+                                    data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <!-- /Carousel -->
+
                         <div class="card-body">
-                            <h5 class="card-title text-uppercase">Sistema de Cadastro
+                            <h5 class="card-title text-uppercase">
+                                Sistema de Cadastro
                                 <span
                                     class="text-decoration-underline"
                                     data-bs-toggle="tooltip"
-                                    data-bs-placement="auto"
-                                    title="Create (Criar), Read (Ler), Update (Atualizar) e Delete (Deletar)"
-                                    >
+                                    title="Create, Read, Update e Delete">
                                     CRUD
                                 </span>
-
                             </h5>
+
                             <p class="card-text">
                                 Sistema de cadastro de Pessoa Física e Jurídica feito em Django para uso em sistemas
                                 diversos e/ou modelos.
                             </p>
+
                             Ferramentas Utilizadas:
                             <ul>
                                 <li>HTML5 - CSS3 - Bootstrap</li>
@@ -534,12 +578,26 @@
                                 <li>Python - Django</li>
                                 <li>SQLite</li>
                             </ul>
-                            <a href="https://github.com/denisms7/cadastros" target="_blank" class="btn btn-primary nao-imprimir">
-                                <span class=" bi bi-github me-1" aria-hidden="true"></span>Saiba Mais
+
+                            <a href="https://github.com/denisms7/cadastros"
+                            target="_blank"
+                            class="btn btn-primary nao-imprimir">
+                                <span class="bi bi-github me-1"></span>Saiba Mais
                             </a>
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
                 <div class="col-12 col-sm-6 d-none">
                     <div class="card mb-3 border-0">
                         <img src="static/img/portifolio/none.png" class="card-img-top" alt="Banner">
