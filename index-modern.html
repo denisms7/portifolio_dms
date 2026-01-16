@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO básico -->
+    <title>Denis Muniz Silva - Portfólio Profissional</title>
+    <meta name="description"
+        content="Portfólio de projetos de Denis Muniz Silva, programador Python especializado em Django e Pandas, desenvolvendo soluções digitais para gestão.">
+    <meta name="author" content="Denis Muniz Silva">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords"
+        content="Denis Muniz Silva, Python, Django, Portfólio, Projetos, Programador, Desenvolvimento Web, Pandas, analise de dados, Ciência de Dados, Administração Pública">
+
+    <link rel="icon" href="./static/img/icon.ico">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icones - Bootstrap Icons -->
+    <link rel="stylesheet" href="./static/css/bootstrap-icons-1.13.1/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://denisms7.github.io/portifolio_dms/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Denis Muniz Silva - Portfólio Profissional">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://denisms7.github.io/portifolio_dms/">
+    <meta property="og:image" content="https://denisms7.github.io/portifolio_dms/static/img/perfil/perfil.png">
+    <meta property="og:description"
+        content="Conheça os projetos e soluções digitais desenvolvidos por Denis Muniz Silva.">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Denis Muniz Silva - Portfólio Profissional">
+    <meta name="twitter:description" content="Projetos e soluções digitais criados por Denis Muniz Silva.">
+    <meta name="twitter:image" content="https://denisms7.github.io/portifolio_dms/static/img/perfil/perfil.png">
+
+    <!-- Configuração Tailwind Customizada -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            purple: '#8b5cf6',
+                            pink: '#ec4899',
+                            orange: '#f59e0b',
+                            green: '#10b981',
+                            cyan: '#06b6d4',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'slide-down': 'slideDown 0.3s ease-out',
+                        'scale-in': 'scaleIn 0.3s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-10px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.95)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Scrollbar customizado */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .dark .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Card hover effect */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Estilos para impressão */
+        @media print {
+            @page {
+                margin: 0.5cm;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .nao-imprimir {
+                display: none !important;
+            }
+
+            .quebra-antes {
+                page-break-before: always;
+                break-before: page;
+            }
+        }
+
+        /* Active nav link */
+        .nav-active {
+            color: #3b82f6;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #3b82f6;
+        }
+
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-blue-950 dark:to-purple-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- NAVBAR FIXED -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass nao-imprimir">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo/Name -->
+                <a href="#hero" class="text-xl font-bold gradient-text font-mono">
+                    &lt;DMS /&gt;
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#hero" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Início</a>
+                    <a href="#sobre" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Sobre</a>
+                    <a href="#habilidades" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Skills</a>
+                    <a href="#projetos" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Projetos</a>
+                    <a href="#certificados" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Certificados</a>
+                    <a href="#contato" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Contato</a>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button onclick="CapTheme()" id="theme-toggle" class="p-2 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">
+                    <i class="bi bi-moon-stars-fill text-xl"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/50">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 animate-slide-down">
+                <div class="flex flex-col space-y-2">
+                    <a href="#hero" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Início</a>
+                    <a href="#sobre" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Sobre</a>
+                    <a href="#habilidades" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Skills</a>
+                    <a href="#projetos" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Projetos</a>
+                    <a href="#certificados" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Certificados</a>
+                    <a href="#contato" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-16 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Content -->
+                <div class="space-y-8 animate-slide-up">
+                    <div class="inline-block">
+                        <span class="px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-medium">
+                            👋 Olá, eu sou
+                        </span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                        Denis Muniz
+                        <span class="gradient-text block">Silva</span>
+                    </h1>
+
+                    <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-light">
+                        Programador Python | Cientista de Dados
+                    </p>
+
+                    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
+                        Especialista em <span class="font-semibold text-gray-900 dark:text-white">Django</span> e
+                        <span class="font-semibold text-gray-900 dark:text-white">Pandas</span>, desenvolvendo
+                        soluções digitais inovadoras para otimização de processos na administração pública.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projetos" class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
+                            Ver Projetos
+                            <i class="bi bi-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#contato" class="inline-flex items-center px-8 py-4 border-2 border-gray-300 dark:border-gray-700 rounded-xl font-medium hover:bg-white dark:hover:bg-gray-800 transition-all duration-300">
+                            Contato
+                            <i class="bi bi-envelope ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-8">
+                        <div>
+                            <div class="text-3xl font-bold gradient-text"><span id="ch-total">0</span>h</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Estudos</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold gradient-text"><span id="id_idade"></span> anos</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Idade</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold gradient-text">8+</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Anos TI</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="relative lg:block nao-imprimir">
+                    <div class="relative z-10 float-animation">
+                        <img src="static/img/perfil/perfil.png" alt="Denis Muniz Silva"
+                             class="rounded-3xl shadow-2xl w-full max-w-md mx-auto border-4 border-white dark:border-gray-800">
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute top-0 right-0 w-72 h-72 bg-purple-300 dark:bg-purple-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-pulse"></div>
+                    <div class="absolute bottom-0 left-0 w-72 h-72 bg-blue-300 dark:bg-blue-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-pulse" style="animation-delay: 2s;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE SECTION -->
+    <section id="sobre" class="py-24 px-4">
+        <div class="container mx-auto max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Conheça mais</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Sobre Mim</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                <!-- Bio -->
+                <div class="space-y-6">
+                    <div class="glass rounded-2xl p-8 card-hover">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i class="bi bi-person-badge mr-3 text-blue-600 dark:text-blue-400"></i>
+                            Perfil
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Tenho <span id="id_idade2" class="font-semibold"></span> anos. Sou pedagogo por formação,
+                            mas atuo como funcionário público na área de <span class="font-semibold text-blue-600 dark:text-blue-400">TI e Administração</span>.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                            Sou curioso e esforçado, sempre procurando novos campos de conhecimento para explorar.
+                            <span class="font-semibold">Autodidata</span>, aprendo novas coisas com muita facilidade.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                            Sei tocar <span class="font-semibold">6 instrumentos musicais</span> e sou amante de café ☕.
+                            Estou sempre me atualizando em todos os campos que atuo, e sou responsável com meu trabalho,
+                            buscando entregar o meu melhor nos projetos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interests -->
+                <div class="space-y-6">
+                    <div class="glass rounded-2xl p-8 card-hover">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i class="bi bi-dribbble mr-3 text-purple-600 dark:text-purple-400"></i>
+                            Lazer
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Gosto muito de praticar <span class="font-semibold">marcenaria</span> nas horas vagas,
+                            estudo eletrônica e efetuo reparos em equipamentos diversos. Sou amante de jogos e setups gamers 🎮.
+                        </p>
+                    </div>
+
+                    <div class="glass rounded-2xl p-8 card-hover">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i class="bi bi-robot mr-3 text-green-600 dark:text-green-400"></i>
+                            Automação Residencial
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Me interesso muito por <span class="font-semibold">automação residencial</span> e pratico como hobby.
+                            Possuo diversas automações em minha casa utilizando <span class="font-mono text-sm">Home Assistant</span>,
+                            Alexa, Tuya, e Ewelink 🏠.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES SECTION -->
+    <section id="habilidades" class="py-24 px-4 bg-white/50 dark:bg-gray-900/50">
+        <div class="container mx-auto max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Expertise</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Habilidades Técnicas</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Linguagens -->
+                <div class="glass rounded-2xl p-6 card-hover group">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                            <i class="bi bi-code-slash text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Linguagens</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>Python</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>JavaScript / TypeScript</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>HTML, CSS</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>VBA (Microsoft Access)</li>
+                    </ul>
+                </div>
+
+                <!-- Dados -->
+                <div class="glass rounded-2xl p-6 card-hover group">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                            <i class="bi bi-bar-chart-line text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Dados & Bancos</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>Análise de dados e Web Scraping</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>SQL</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>PostgreSQL, MySQL, MongoDB</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>Matplotlib, Seaborn, Plotly</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>Dash, Streamlit, Tableau</li>
+                    </ul>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="glass rounded-2xl p-6 card-hover group">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                            <i class="bi bi-layers text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Frameworks Web</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Django, Flask</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>VueJS, React</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Bootstrap, Tailwind CSS</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>SASS, LESS</li>
+                    </ul>
+                </div>
+
+                <!-- ML/AI -->
+                <div class="glass rounded-2xl p-6 card-hover group">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                            <i class="bi bi-cpu text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">ML & Estatística</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>Estatística descritiva</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>Regressão, classificação</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>Sklearn, Scipy (estudo)</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>Métricas: RMSE, MAE, ROC</li>
+                    </ul>
+                </div>
+
+                <!-- Infraestrutura -->
+                <div class="glass rounded-2xl p-6 card-hover group">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                            <i class="bi bi-hdd-network text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Infraestrutura</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Redes, Windows Server</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Infraestrutura UTP/SFP</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Telefonia VoIP</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>CFTV-IP ONVIF</li>
+                    </ul>
+                </div>
+
+                <!-- Ferramentas -->
+                <div class="glass rounded-2xl p-6 card-hover group">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                            <i class="bi bi-tools text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Ferramentas</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>Git, GitHub</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>Docker, Heroku, AWS</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>Excel e Access avançados</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>Adobe Suite</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS SECTION -->
+    <section id="projetos" class="py-24 px-4">
+        <div class="container mx-auto max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Projetos em Destaque</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Projeto VBP -->
+                <div class="glass rounded-2xl overflow-hidden card-hover group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="static/img/portifolio/vbp1.png" alt="VBP Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full mb-2">Dashboard</span>
+                            <h3 class="text-white text-2xl font-bold">Valor Bruto da Produção</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Dashboard web interativo para análise do VBP municipal, desenvolvido para a Controladoria de
+                            <a href="https://www.centenariodosul.pr.gov.br" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Centenário do Sul-PR</a>.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-medium rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-medium rounded-full">Pandas</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-medium rounded-full">Streamlit</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-xs font-medium rounded-full">Docker</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://vbp-seab.streamlit.app/" target="_blank" class="flex-1 inline-flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+                                <i class="bi bi-box-arrow-up-right mr-2"></i>Ver Demo
+                            </a>
+                            <a href="https://github.com/denisms7/vbp" target="_blank" class="flex-1 inline-flex items-center justify-center px-4 py-2 border-2 border-gray-300 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 rounded-lg transition-all">
+                                <i class="bi bi-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto Restaurante -->
+                <div class="glass rounded-2xl overflow-hidden card-hover group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="static/img/portifolio/restaurante.png" alt="Restaurante" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="inline-block px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full mb-2">Website</span>
+                            <h3 class="text-white text-2xl font-bold">Restaurante</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Página web responsiva para um restaurante fictício, otimizada para dispositivos móveis e desktop.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-xs font-medium rounded-full">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-medium rounded-full">CSS3</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-medium rounded-full">Bootstrap</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs font-medium rounded-full">JavaScript</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://modulo-14-projeto-3-orpin.vercel.app/" target="_blank" class="flex-1 inline-flex items-center justify-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors">
+                                <i class="bi bi-box-arrow-up-right mr-2"></i>Ver Demo
+                            </a>
+                            <a href="https://github.com/denisms7/modulo-14-projeto-3" target="_blank" class="flex-1 inline-flex items-center justify-center px-4 py-2 border-2 border-gray-300 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 rounded-lg transition-all">
+                                <i class="bi bi-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sistema CRUD -->
+                <div class="glass rounded-2xl overflow-hidden card-hover group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="static/img/portifolio/cadastro1.png" alt="Sistema CRUD" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="inline-block px-3 py-1 bg-purple-500 text-white text-xs font-semibold rounded-full mb-2">Web App</span>
+                            <h3 class="text-white text-2xl font-bold">Sistema de Cadastro CRUD</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Sistema completo de cadastro de Pessoa Física e Jurídica desenvolvido em Django.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-medium rounded-full">Django</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-medium rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-medium rounded-full">SQLite</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs font-medium rounded-full">JavaScript</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/denisms7/cadastros" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors">
+                                <i class="bi bi-github mr-2"></i>Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Análise Imobiliária -->
+                <div class="glass rounded-2xl overflow-hidden card-hover group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="static/img/portifolio/imobiliaria.png" alt="Análise Imobiliária" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="inline-block px-3 py-1 bg-cyan-500 text-white text-xs font-semibold rounded-full mb-2">Data Science</span>
+                            <h3 class="text-white text-2xl font-bold">Análise de Dados Imobiliários</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Análise exploratória de dados imobiliários respondendo questionamentos de negócio.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-medium rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-medium rounded-full">Pandas</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-xs font-medium rounded-full">Jupyter</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-medium rounded-full">Anaconda</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/denisms7/projeto_001.git" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors">
+                                <i class="bi bi-github mr-2"></i>Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICADOS SECTION -->
+    <section id="certificados" class="py-24 px-4 bg-white/50 dark:bg-gray-900/50">
+        <div class="container mx-auto max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Educação</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Certificados & Formação</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="glass rounded-2xl p-6 text-center card-hover">
+                    <div class="text-4xl font-bold gradient-text mb-2"><span id="ch-Formal-total2">0</span>h</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-medium">Ensino Formal</div>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center card-hover">
+                    <div class="text-4xl font-bold gradient-text mb-2"><span id="ch-informal-total2">0</span>h</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-medium">Ensino Informal</div>
+                </div>
+                <div class="glass rounded-2xl p-6 text-center card-hover">
+                    <div class="text-4xl font-bold gradient-text mb-2">6+</div>
+                    <div class="text-gray-600 dark:text-gray-400 font-medium">Certificações Ativas</div>
+                </div>
+            </div>
+
+            <!-- Link para página completa -->
+            <div class="text-center nao-imprimir">
+                <a href="formacao.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
+                    <i class="bi bi-file-earmark-text mr-2"></i>
+                    Ver Formação Completa
+                    <i class="bi bi-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Ensino Formal -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="bi bi-mortarboard mr-3 text-blue-600 dark:text-blue-400"></i>
+                    Ensino Formal
+                </h3>
+                <div class="space-y-4">
+
+                    <!-- MBA Finanças -->
+                    <div class="glass rounded-xl p-6 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs font-semibold rounded-full">Em Andamento</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">2026</span>
+                                </div>
+                                <h4 class="text-lg font-bold mb-1">MBA - Finanças, Auditoria e Controladoria</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Faculdade Líbano • 720 horas</p>
+                            </div>
+                            <a href="./static/pdf/ensino_formal/Líbano-MBA-Em-Finanças-Auditoria-e-Controladoria.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors whitespace-nowrap">
+                                <i class="bi bi-file-earmark-text mr-2"></i>Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- MBA Análise de Dados -->
+                    <div class="glass rounded-xl p-6 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs font-semibold rounded-full">Em Andamento</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">2026</span>
+                                </div>
+                                <h4 class="text-lg font-bold mb-1">MBA - Análise de Dados</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Faculdade Líbano • 720 horas</p>
+                            </div>
+                            <a href="./static/pdf/ensino_formal/Líbano-MBA-em-Análise-de-Dados.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors whitespace-nowrap">
+                                <i class="bi bi-file-earmark-text mr-2"></i>Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Técnico Administração -->
+                    <div class="glass rounded-xl p-6 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-semibold rounded-full">Concluído</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                                </div>
+                                <h4 class="text-lg font-bold mb-1">Técnico em Administração</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Colégio Técnico GlobalTec • 1200 horas</p>
+                            </div>
+                            <a href="./static/pdf/ensino_formal/GlobalTec-Tecnico_em_Administracao.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors whitespace-nowrap">
+                                <i class="bi bi-file-earmark-text mr-2"></i>Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pedagogia -->
+                    <div class="glass rounded-xl p-6 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-semibold rounded-full">Concluído</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">2018</span>
+                                </div>
+                                <h4 class="text-lg font-bold mb-1">Licenciatura em Pedagogia</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">UNINTER • 3360 horas</p>
+                            </div>
+                            <a href="./static/pdf/ensino_formal/UNINTER-Certificado_Denis_Muniz_Silva.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors whitespace-nowrap">
+                                <i class="bi bi-file-earmark-text mr-2"></i>Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Cursos Recentes -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="bi bi-patch-check mr-3 text-purple-600 dark:text-purple-400"></i>
+                    Cursos & Especializações Recentes
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                    <div class="glass rounded-xl p-5 card-hover">
+                        <div class="flex items-start justify-between mb-3">
+                            <span class="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded">Hard Skill</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">2026</span>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm">Governo Aberto: Transparência</h4>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mb-2">ENAP • 10h</p>
+                        <a href="./static/pdf/ensino_informal/Hard_Skills/ENAP-governo_aberto_transparencia_e_dados_abertos.pdf" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+                            Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass rounded-xl p-5 card-hover">
+                        <div class="flex items-start justify-between mb-3">
+                            <span class="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded">Hard Skill</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">2025</span>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm">Django Master - APIs Modernas</h4>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mb-2">PycodeBR • 18h</p>
+                        <a href="./static/pdf/ensino_informal/Hard_Skills/PycodeBR_Django_Master2.pdf" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+                            Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass rounded-xl p-5 card-hover">
+                        <div class="flex items-start justify-between mb-3">
+                            <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-semibold rounded">Soft Skill</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">2025</span>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm">Comunicação Assertiva</h4>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mb-2">Faculdade Líbano • 2h</p>
+                        <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Comunicação Assertiva - Líbano.pdf" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+                            Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass rounded-xl p-5 card-hover">
+                        <div class="flex items-start justify-between mb-3">
+                            <span class="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded">Hard Skill</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">2025</span>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm">Dashboards com Dash</h4>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mb-2">Asimov Academy • 24h</p>
+                        <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Dashboards-com-Dash.pdf" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+                            Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass rounded-xl p-5 card-hover">
+                        <div class="flex items-start justify-between mb-3">
+                            <span class="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded">Hard Skill</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">2025</span>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm">HTML5 Completo</h4>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mb-2">Curso em Video • 40h</p>
+                        <a href="./static/pdf/ensino_informal/Hard_Skills/Curso-em-Video-HTML5.pdf" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+                            Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass rounded-xl p-5 card-hover">
+                        <div class="flex items-start justify-between mb-3">
+                            <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-semibold rounded">Soft Skill</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">2025</span>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm">Liderança e Resultados</h4>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mb-2">Faculdade Líbano • 2h</p>
+                        <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Liderança e Resultados - Líbano.pdf" target="_blank" class="text-xs text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+                            Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTATO SECTION -->
+    <section id="contato" class="py-24 px-4">
+        <div class="container mx-auto max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Fale Comigo</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-4">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+                <p class="text-gray-600 dark:text-gray-400 mt-6 max-w-2xl mx-auto">
+                    Estou sempre aberto a novos projetos e oportunidades. Vamos conversar!
+                </p>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+
+                <a href="https://api.whatsapp.com/send?phone=5543991038557" target="_blank" class="glass rounded-2xl p-6 card-hover group">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="bi bi-whatsapp text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">WhatsApp</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">+55 (43) 9 9103 8557</p>
+                </a>
+
+                <div class="glass rounded-2xl p-6 card-hover group">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="bi bi-envelope-fill text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Email</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 break-all">denis.m.s.777@hotmail.com</p>
+                </div>
+
+                <a href="https://www.linkedin.com/in/denisms/" target="_blank" class="glass rounded-2xl p-6 card-hover group">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="bi bi-linkedin text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">LinkedIn</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Denis Muniz Silva</p>
+                </a>
+
+                <a href="https://github.com/denisms7" target="_blank" class="glass rounded-2xl p-6 card-hover group">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-700 to-gray-900 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="bi bi-github text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">GitHub</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">@denisms7</p>
+                </a>
+
+            </div>
+
+            <!-- Quote -->
+            <div class="glass rounded-2xl p-8 text-center max-w-3xl mx-auto">
+                <blockquote class="text-xl md:text-2xl italic text-gray-700 dark:text-gray-300">
+                    "Posso não saber a resposta, mas vou até o fim para achar a solução."
+                </blockquote>
+                <p class="text-gray-500 dark:text-gray-400 mt-4">— Autor desconhecido</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-4 border-t border-gray-200 dark:border-gray-800 nao-imprimir">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+                <!-- Logo -->
+                <div class="text-center md:text-left">
+                    <div class="text-2xl font-bold gradient-text font-mono mb-2">&lt;DMS /&gt;</div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Desenvolvido com ❤️ por Denis Muniz Silva
+                    </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex gap-4">
+                    <a href="https://github.com/denisms7" target="_blank" class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/denisms/" target="_blank" class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=5543991038557" target="_blank" class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+
+                <!-- Year -->
+                <div class="text-sm text-gray-600 dark:text-gray-400">
+                    © <span id="id_ano"></span> Denis Muniz Silva
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#hero" class="fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all nao-imprimir z-40 hover:scale-110">
+        <i class="bi bi-arrow-up text-xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="./static/js/main.js" defer></script>
+
+    <script>
+        // Theme Toggle
+        function CapTheme() {
+            const html = document.documentElement;
+            const currentTheme = localStorage.getItem('tema_dms_portifolio') || 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            if (newTheme === 'dark') {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+
+            localStorage.setItem('tema_dms_portifolio', newTheme);
+            updateThemeIcon(newTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('theme-toggle').querySelector('i');
+            if (theme === 'dark') {
+                icon.className = 'bi bi-sun-fill text-xl';
+            } else {
+                icon.className = 'bi bi-moon-stars-fill text-xl';
+            }
+        }
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem('tema_dms_portifolio') || 'light';
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+        updateThemeIcon(savedTheme);
+
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Scroll Spy
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('nav-active');
+                const href = link.getAttribute('href');
+                if (href === `#${current}`) {
+                    link.classList.add('nav-active');
+                }
+            });
+        });
+
+        // Populate additional age fields
+        document.addEventListener('DOMContentLoaded', function() {
+            const idade = document.getElementById('id_idade').textContent;
+            const id_idade2 = document.getElementById('id_idade2');
+            if (id_idade2) {
+                id_idade2.textContent = idade;
+            }
+
+            // Calculate total hours
+            calcularTotalCHFormal();
+            calcularTotalCHInformal();
+
+            const formal = parseInt(document.getElementById('ch-Formal-total').textContent) || 0;
+            const informal = parseInt(document.getElementById('ch-informal-total').textContent) || 0;
+            const total = formal + informal;
+
+            document.getElementById('ch-total').textContent = total.toLocaleString('pt-BR');
+            document.getElementById('ch-Formal-total2').textContent = formal.toLocaleString('pt-BR');
+            document.getElementById('ch-informal-total2').textContent = informal.toLocaleString('pt-BR');
+        });
+    </script>
+
+</body>
+
+</html>

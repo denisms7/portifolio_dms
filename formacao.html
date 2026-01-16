@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formação & Certificados - Denis Muniz Silva</title>
+    <meta name="description" content="Formação acadêmica, certificados e documentos profissionais de Denis Muniz Silva">
+    <meta name="author" content="Denis Muniz Silva">
+    <link rel="icon" href="./static/img/icon.ico">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="./static/css/bootstrap-icons-1.13.1/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: {
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Scrollbar customizado */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .dark .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Card hover */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Estilos para impressão */
+        @media print {
+            @page {
+                margin: 0.5cm;
+            }
+
+            .nao-imprimir {
+                display: none !important;
+            }
+
+            .quebra-antes {
+                page-break-before: always;
+                break-before: page;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-blue-950 dark:to-purple-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass nao-imprimir">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo -->
+                <a href="index-modern.html" class="text-xl font-bold gradient-text font-mono">
+                    &lt;DMS /&gt;
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index-modern.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">
+                        <i class="bi bi-house mr-2"></i>Início
+                    </a>
+                    <a href="#formal" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Ensino Formal</a>
+                    <a href="#informal" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Ensino Informal</a>
+                    <a href="#pmcs" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">PMCS</a>
+                    <a href="#premiacoes" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Premiações</a>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button onclick="CapTheme()" id="theme-toggle" class="p-2 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">
+                    <i class="bi bi-moon-stars-fill text-xl"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/50">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="index-modern.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">
+                        <i class="bi bi-house mr-2"></i>Início
+                    </a>
+                    <a href="#formal" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Ensino Formal</a>
+                    <a href="#informal" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Ensino Informal</a>
+                    <a href="#pmcs" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">PMCS</a>
+                    <a href="#premiacoes" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all">Premiações</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <section class="pt-32 pb-16 px-4">
+        <div class="container mx-auto max-w-7xl text-center">
+            <span class="inline-block px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-medium mb-6">
+                📚 Formação Completa
+            </span>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                Certificados &
+                <span class="gradient-text">Documentação</span>
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12">
+                Minha trajetória acadêmica e profissional completa, incluindo formação formal,
+                cursos de especialização e documentos profissionais.
+            </p>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-3xl font-bold gradient-text mb-2"><span id="ch-Formal-total">0</span>h</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">Ensino Formal</div>
+                </div>
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-3xl font-bold gradient-text mb-2"><span id="ch-informal-total">0</span>h</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">Ensino Informal</div>
+                </div>
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-3xl font-bold gradient-text mb-2">11</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">Documentos PMCS</div>
+                </div>
+                <div class="glass rounded-2xl p-6">
+                    <div class="text-3xl font-bold gradient-text mb-2">3</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">Premiações</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENSINO FORMAL -->
+    <section id="formal" class="py-16 px-4">
+        <div class="container mx-auto max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Educação</span>
+                <h2 class="text-4xl font-bold mt-2 mb-4">Ensino Formal</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="space-y-6">
+
+                <!-- 2027 -->
+                <div class="glass rounded-2xl p-6 card-hover">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-32 flex-shrink-0">
+                            <div class="inline-block px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 font-bold">
+                                2027
+                            </div>
+                            <div class="mt-2">
+                                <span class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-xs font-semibold rounded-full">
+                                    A Iniciar
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">Gestão Pública</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                <span class="inline-block w-48 h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"></span>
+                            </p>
+                            <div class="flex items-center gap-2">
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-hourglass-split mr-1"></i>Em breve
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center nao-imprimir">
+                            <button class="px-6 py-3 bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-xl cursor-not-allowed flex items-center gap-2" disabled>
+                                <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-gray-500"></div>
+                                Aguardando
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2026 - MBA Finanças -->
+                <div class="glass rounded-2xl p-6 card-hover border-l-4 border-yellow-500">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-32 flex-shrink-0">
+                            <div class="inline-block px-4 py-2 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 font-bold text-yellow-600 dark:text-yellow-400">
+                                2026
+                            </div>
+                            <div class="mt-2">
+                                <span class="inline-block px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs font-semibold rounded-full">
+                                    Em Andamento
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">MBA - Finanças, Auditoria e Controladoria</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Faculdade Líbano • <span class="font-semibold ch-Formal">720</span> horas
+                            </p>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-graph-up mr-1"></i>Finanças
+                                </span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-clipboard-check mr-1"></i>Auditoria
+                                </span>
+                                <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-calculator mr-1"></i>Controladoria
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center nao-imprimir">
+                            <a href="./static/pdf/ensino_formal/Líbano-MBA-Em-Finanças-Auditoria-e-Controladoria.pdf" target="_blank" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium hover:shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105 flex items-center gap-2">
+                                <i class="bi bi-file-earmark-pdf"></i>
+                                Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2026 - MBA Análise -->
+                <div class="glass rounded-2xl p-6 card-hover border-l-4 border-yellow-500">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-32 flex-shrink-0">
+                            <div class="inline-block px-4 py-2 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 font-bold text-yellow-600 dark:text-yellow-400">
+                                2026
+                            </div>
+                            <div class="mt-2">
+                                <span class="inline-block px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs font-semibold rounded-full">
+                                    Em Andamento
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">MBA - Análise de Dados</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Faculdade Líbano • <span class="font-semibold ch-Formal">720</span> horas
+                            </p>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-bar-chart-line mr-1"></i>Data Science
+                                </span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-database mr-1"></i>Big Data
+                                </span>
+                                <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-graph-up-arrow mr-1"></i>Analytics
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center nao-imprimir">
+                            <a href="./static/pdf/ensino_formal/Líbano-MBA-em-Análise-de-Dados.pdf" target="_blank" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium hover:shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105 flex items-center gap-2">
+                                <i class="bi bi-file-earmark-pdf"></i>
+                                Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2025 - Técnico -->
+                <div class="glass rounded-2xl p-6 card-hover border-l-4 border-green-500">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-32 flex-shrink-0">
+                            <div class="inline-block px-4 py-2 rounded-lg bg-green-100 dark:bg-green-900/30 font-bold text-green-600 dark:text-green-400">
+                                2025
+                            </div>
+                            <div class="mt-2">
+                                <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-semibold rounded-full">
+                                    ✓ Concluído
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">Técnico em Administração</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Colégio Técnico GlobalTec • <span class="font-semibold ch-Formal">1200</span> horas
+                            </p>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-briefcase mr-1"></i>Administração
+                                </span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-building mr-1"></i>Gestão
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center nao-imprimir">
+                            <a href="./static/pdf/ensino_formal/GlobalTec-Tecnico_em_Administracao.pdf" target="_blank" class="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl font-medium hover:shadow-2xl hover:shadow-green-500/50 transition-all hover:scale-105 flex items-center gap-2">
+                                <i class="bi bi-file-earmark-pdf"></i>
+                                Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2018 - Pedagogia -->
+                <div class="glass rounded-2xl p-6 card-hover border-l-4 border-green-500">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-32 flex-shrink-0">
+                            <div class="inline-block px-4 py-2 rounded-lg bg-green-100 dark:bg-green-900/30 font-bold text-green-600 dark:text-green-400">
+                                2018
+                            </div>
+                            <div class="mt-2">
+                                <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-semibold rounded-full">
+                                    ✓ Concluído
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">Licenciatura em Pedagogia</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                UNINTER (Centro Universitário Internacional) • <span class="font-semibold ch-Formal">3360</span> horas
+                            </p>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-mortarboard mr-1"></i>Graduação
+                                </span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-book mr-1"></i>Licenciatura
+                                </span>
+                                <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-award mr-1"></i>Pedagogia
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center nao-imprimir">
+                            <a href="./static/pdf/ensino_formal/UNINTER-Certificado_Denis_Muniz_Silva.pdf" target="_blank" class="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl font-medium hover:shadow-2xl hover:shadow-green-500/50 transition-all hover:scale-105 flex items-center gap-2">
+                                <i class="bi bi-file-earmark-pdf"></i>
+                                Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2012 - Ensino Médio -->
+                <div class="glass rounded-2xl p-6 card-hover border-l-4 border-green-500">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-32 flex-shrink-0">
+                            <div class="inline-block px-4 py-2 rounded-lg bg-green-100 dark:bg-green-900/30 font-bold text-green-600 dark:text-green-400">
+                                2012
+                            </div>
+                            <div class="mt-2">
+                                <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-semibold rounded-full">
+                                    ✓ Concluído
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">Ensino Médio Completo</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Colégio Estadual Padre José Pires • <span class="font-semibold ch-Formal">2632</span> horas
+                            </p>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-bookmark-check mr-1"></i>Ensino Médio
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center nao-imprimir">
+                            <button class="px-6 py-3 border-2 border-gray-300 dark:border-gray-700 text-gray-400 dark:text-gray-500 rounded-xl font-medium cursor-not-allowed flex items-center gap-2" disabled>
+                                <i class="bi bi-file-earmark-x"></i>
+                                Indisponível
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2009 - Fundamental -->
+                <div class="glass rounded-2xl p-6 card-hover border-l-4 border-green-500">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-32 flex-shrink-0">
+                            <div class="inline-block px-4 py-2 rounded-lg bg-green-100 dark:bg-green-900/30 font-bold text-green-600 dark:text-green-400">
+                                2009
+                            </div>
+                            <div class="mt-2">
+                                <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-semibold rounded-full">
+                                    ✓ Concluído
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2">Ensino Fundamental Completo</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Escola Municipal Irmã Osmunda / Colégio Estadual Padre José Pires • <span class="font-semibold ch-Formal">6532</span> horas
+                            </p>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium">
+                                    <i class="bi bi-bookmark-check mr-1"></i>Ensino Fundamental
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center nao-imprimir">
+                            <button class="px-6 py-3 border-2 border-gray-300 dark:border-gray-700 text-gray-400 dark:text-gray-500 rounded-xl font-medium cursor-not-allowed flex items-center gap-2" disabled>
+                                <i class="bi bi-file-earmark-x"></i>
+                                Indisponível
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Validação -->
+            <div class="mt-12 glass rounded-2xl p-6 text-center">
+                <p class="text-gray-600 dark:text-gray-400">
+                    <i class="bi bi-shield-check text-blue-600 dark:text-blue-400 text-2xl mr-2"></i>
+                    Todos os documentos podem ser validados em
+                    <a href="https://emec.mec.gov.br/emec/nova" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold">e-MEC</a> e/ou
+                    <a href="https://sistec.mec.gov.br/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold">SISTEC</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ENSINO INFORMAL -->
+    <section id="informal" class="py-16 px-4 bg-white/50 dark:bg-gray-900/50">
+        <div class="container mx-auto max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <span class="text-purple-600 dark:text-purple-400 font-semibold text-sm uppercase tracking-wider">Especialização</span>
+                <h2 class="text-4xl font-bold mt-2 mb-4">Ensino Informal</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Cursos Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- 2026 - ENAP -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2026</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Governo Aberto: Transparência e Dados Abertos</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">ENAP • <span class="ch-informal">10</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/ENAP-governo_aberto_transparencia_e_dados_abertos.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Django Master 1 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Django Master - Aplicações Web com Python e Django</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">PycodeBR • <span class="ch-informal">45</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/PycodeBR_Django_Master1.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Django Master 2 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Django Master - APIs Modernas com Python e Django</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">PycodeBR • <span class="ch-informal">18</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/PycodeBR_Django_Master2.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Django Master 3 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Django Master - Arquitetura e Modelagem</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">PycodeBR • <span class="ch-informal">21</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/PycodeBR_Django_Master3.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Integration Master -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Integration Master - Integrações de Sistemas e APIs</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">PycodeBR • <span class="ch-informal">15</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/PycodeBR_Integration_Master.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - HTML5 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">HTML5 Completo</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Curso em Video • <span class="ch-informal">40</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Curso-em-Video-HTML5.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Excel -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Microsoft Excel</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Curso em Video • <span class="ch-informal">40</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Curso-em-Video-Excel.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Dashboards Dash -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Dashboards com Dash</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Asimov Academy • <span class="ch-informal">24</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Dashboards-com-Dash.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Soft Skill -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-semibold rounded-full">Soft Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Despesas de Pessoal - Governança</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">TCE-PR • <span class="ch-informal">03</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Soft_Skills/TCE-PR_Despesas-de-Pessoal-Governança-Aplicada-Gestão-de-Pessoas.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2024 - Adobe Premiere -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2024</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Adobe Premiere - Edição de Vídeo Avançado</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Adrian Sacomani • <span class="ch-informal">24</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Sacomani_Adobe-Premiere.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2024 - Photoshop -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2024</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Adobe Photoshop - Edição de Fotos Avançado</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Adrian Sacomani • <span class="ch-informal">20</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Sacomani_Adobe-Photoshop.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2022 - Python Starter -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2022</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Python Starter</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Asimov Academy • <span class="ch-informal">11</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Python-Starter.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2022 - Pandas -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2022</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Analisando Dados com Pandas</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Asimov Academy • <span class="ch-informal">04</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Analisando-Dados-com-Pandas.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - TCE-PR Conselheiros -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Formação de Conselheiros Municipais</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">TCE-PR • <span class="ch-informal">03</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/TCE-PR_Conselheiros_Municipais.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - TCE-PR Aposentadorias -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Aposentadorias no Regime Próprio de Previdência</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">TCE-PR • <span class="ch-informal">03</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/TCE-PR_Aposentadorias-no-Regime-Próprio-de-Previdência.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Santander Excel -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Microsoft Excel</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Santander Academy • <span class="ch-informal">08</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Santander-Open-Academy-Excel.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Santander ChatGPT -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Fundamentos do ChatGPT</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Santander Academy • <span class="ch-informal">08</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Santander-Open-Academy-Fundamentos-do-ChatGPT.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Labora ETP -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Workshop ETP com IA na Prática</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Labora Digital • <span class="ch-informal">04</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Labora-Digital_ETP-com-IA.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Julio Battisti TCP/IP -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">TCP/IP - Teoria e Prática em Redes Windows</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Julio Battisti • <span class="ch-informal">20</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Julio-Battisti-TCP-IP-Windows.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Python Starter 2 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Python Starter (Atualização)</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Asimov Academy • <span class="ch-informal">22</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Python-Starter_2.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Plotly -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Gráficos Interativos com Plotly</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Asimov Academy • <span class="ch-informal">03</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Gráficos-Interativos-com-Plotly.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Pandas SQL -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Analisando Dados com Pandas & SQL</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Asimov Academy • <span class="ch-informal">12</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Analisando-Dados-com-Pandas-e-SQL.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Emails Python -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Lendo e Enviando Emails com Python</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Asimov Academy • <span class="ch-informal">06</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Lendo-e-Enviando-Emails.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Streamlit -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Criando Aplicativos Web com Streamlit</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Asimov Academy • <span class="ch-informal">04</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/Asimov-Academy-Criando-Aplicativos-Web-com-Streamlit.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - ENAP Soluções Preditivas -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Soluções Preditivas com R e Python</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">ENAP • <span class="ch-informal">25</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/ENAP-solucoes_preditivas_baseadas_em_dados_com_o_uso_do_r_e_do_python.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - ENAP Gestão Documental -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Gestão Documental</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">ENAP • <span class="ch-informal">30</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/ENAP-gestao_documental.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - ENAP Gestão Fiscal -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Gestão Fiscal Municipal</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">ENAP • <span class="ch-informal">10</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/ENAP-gestao_fiscal_municipal.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - ENAP Estatística -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Estatística</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">ENAP • <span class="ch-informal">20</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/ENAP-estatistica.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - ENAP Estatística Análise -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Estatística para Análise de Dados na Adm. Pública</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">ENAP • <span class="ch-informal">25</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/ENAP-estatistica_para_analise_de_dados_na_administracao_publica.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Soft Skills Líbano -->
+                <!-- 2025 - Comunicação Assertiva -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-semibold rounded-full">Soft Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Comunicação Assertiva</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Faculdade Líbano • <span class="ch-informal">02</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Comunicação Assertiva - Líbano.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Conduta Profissional -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-semibold rounded-full">Soft Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Conduta Profissional</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Faculdade Líbano • <span class="ch-informal">02</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Conduta Profissional - Líbano.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Flexibilidade -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-semibold rounded-full">Soft Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Flexibilidade</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Faculdade Líbano • <span class="ch-informal">02</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Flexibilidade - Líbano.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Liderança -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-semibold rounded-full">Soft Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Liderança e Resultados</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Faculdade Líbano • <span class="ch-informal">02</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Liderança e Resultados - Líbano.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2025 - Resiliência -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-semibold rounded-full">Soft Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Resiliência</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Faculdade Líbano • <span class="ch-informal">02</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Soft_Skills/Certificado - Resiliência - Líbano.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 2026 - ENAP Acesso à Informação -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2026</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Acesso à Informação</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">ENAP • <span class="ch-informal">20</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/ENAP-zzz.pdf" target="_blank" class="text-sm text-gray-400 dark:text-gray-500 line-through flex items-center nao-imprimir">
+                        Certificado indisponível
+                    </a>
+                </div>
+
+                <!-- 2019 - Governança -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold rounded-full">Hard Skill</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">2019</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Programa - Governança Municipal</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Faculdade Pólis Civitas • <span class="ch-informal">330</span>h</p>
+                    <a href="./static/pdf/ensino_informal/Hard_Skills/polis-civitas-adm_publica.pdf" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                        Ver certificado <i class="bi bi-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Em Andamento -->
+                <!-- Langchain -->
+                <div class="glass rounded-xl p-6 card-hover border-2 border-yellow-300 dark:border-yellow-700">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs font-semibold rounded-full">Em Andamento</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">-</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Aplicações de IA com Langchain</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Asimov Academy • <span class="ch-informal">16</span>h</p>
+                    <div class="text-sm text-gray-400 dark:text-gray-500 flex items-center nao-imprimir">
+                        <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-gray-500 mr-2"></div>
+                        Aguardando conclusão
+                    </div>
+                </div>
+
+                <!-- ENAP Resolução -->
+                <div class="glass rounded-xl p-6 card-hover border-2 border-yellow-300 dark:border-yellow-700">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs font-semibold rounded-full">Em Andamento</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">-</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Programa - Resolução de Problemas com Base em Dados</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">ENAP • <span class="ch-informal">154</span>h</p>
+                    <div class="text-sm text-gray-400 dark:text-gray-500 flex items-center nao-imprimir">
+                        <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-gray-500 mr-2"></div>
+                        Aguardando conclusão
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DOCUMENTOS PMCS -->
+    <section id="pmcs" class="py-16 px-4">
+        <div class="container mx-auto max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <span class="text-green-600 dark:text-green-400 font-semibold text-sm uppercase tracking-wider">Carreira</span>
+                <h2 class="text-4xl font-bold mt-2 mb-4">Documentos Profissionais</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full"></div>
+                <p class="text-gray-600 dark:text-gray-400 mt-4">Prefeitura Municipal de Centenário do Sul</p>
+            </div>
+
+            <!-- Timeline PMCS -->
+            <div class="space-y-4">
+
+                <!-- 2025 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-xl">2025</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg mb-1">Decreto 0241/2025</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
+                                    Progressão por Qualificação aos servidores públicos do Município
+                                </p>
+                            </div>
+                        </div>
+                        <a href="./static/pdf/pmcs/pmcs-241-2025.pdf" target="_blank" class="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl font-medium hover:shadow-xl transition-all whitespace-nowrap nao-imprimir">
+                            <i class="bi bi-file-earmark-pdf mr-2"></i>Ver Documento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2023 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-xl">2023</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg mb-1">Decreto 0266/2023</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
+                                    Progressão por Mérito automática aos servidores públicos
+                                </p>
+                            </div>
+                        </div>
+                        <a href="./static/pdf/pmcs/pmcs-266-2023.pdf" target="_blank" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-medium hover:shadow-xl transition-all whitespace-nowrap nao-imprimir">
+                            <i class="bi bi-file-earmark-pdf mr-2"></i>Ver Documento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2019 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-xl">2019</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg mb-1">Decreto 0293/2019</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
+                                    Nomeação para cargo em comissão - Chefe do Setor de Informática
+                                </p>
+                            </div>
+                        </div>
+                        <a href="./static/pdf/pmcs/pmcs-293-2019.pdf" target="_blank" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl font-medium hover:shadow-xl transition-all whitespace-nowrap nao-imprimir">
+                            <i class="bi bi-file-earmark-pdf mr-2"></i>Ver Documento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2017 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-xl">2017</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg mb-1">Decreto 0144/2017</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
+                                    Admissão em face à aprovação e habilitação em Concurso Público Municipal
+                                </p>
+                            </div>
+                        </div>
+                        <a href="./static/pdf/pmcs/pmcs-144-2017.pdf" target="_blank" class="px-6 py-3 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl font-medium hover:shadow-xl transition-all whitespace-nowrap nao-imprimir">
+                            <i class="bi bi-file-earmark-pdf mr-2"></i>Ver Documento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2015 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-xl">2015</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg mb-1">Edital 0004/2015</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
+                                    Homologação Final para os cargos vagos do Quadro Permanente
+                                </p>
+                            </div>
+                        </div>
+                        <a href="./static/pdf/pmcs/Edital-004-2015-homologacao.pdf" target="_blank" class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white rounded-xl font-medium hover:shadow-xl transition-all whitespace-nowrap nao-imprimir">
+                            <i class="bi bi-file-earmark-pdf mr-2"></i>Ver Documento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2014 -->
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-xl">2014</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg mb-1">Edital 0001/2014</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
+                                    Realização de concurso público
+                                </p>
+                            </div>
+                        </div>
+                        <a href="./static/pdf/pmcs/Edital-001-2014.pdf" target="_blank" class="px-6 py-3 bg-gradient-to-r from-pink-600 to-pink-700 text-white rounded-xl font-medium hover:shadow-xl transition-all whitespace-nowrap nao-imprimir">
+                            <i class="bi bi-file-earmark-pdf mr-2"></i>Ver Documento
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Validação -->
+            <div class="mt-12 glass rounded-2xl p-6 text-center">
+                <p class="text-gray-600 dark:text-gray-400">
+                    <i class="bi bi-shield-check text-green-600 dark:text-green-400 text-2xl mr-2"></i>
+                    Todos os documentos podem ser validados na
+                    <a href="https://www.diariomunicipal.com.br/amp/" target="_blank" class="text-green-600 dark:text-green-400 hover:underline font-semibold">
+                        Associação dos Municípios do Paraná (AMP)
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PREMIAÇÕES -->
+    <section id="premiacoes" class="py-16 px-4 bg-white/50 dark:bg-gray-900/50">
+        <div class="container mx-auto max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <span class="text-yellow-600 dark:text-yellow-400 font-semibold text-sm uppercase tracking-wider">Conquistas</span>
+                <h2 class="text-4xl font-bold mt-2 mb-4">Premiações</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-yellow-600 to-orange-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Premiações Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- 2017 -->
+                <div class="glass rounded-2xl overflow-hidden card-hover">
+                    <div class="relative h-48">
+                        <img src="./static/img/premios/xadrez-2017.jpg" alt="Xadrez 2017" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="inline-block px-3 py-1 bg-yellow-500 text-white text-xs font-semibold rounded-full mb-2">🏆 1º Lugar</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Xadrez Municipal 2017</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                            Jogos de Inverno - Centenário do Sul
+                        </p>
+                        <a href="./static/img/premios/xadrez-2017.jpg" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                            Ver imagem <i class="bi bi-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="glass rounded-2xl overflow-hidden card-hover">
+                    <div class="relative h-48">
+                        <img src="./static/img/premios/jics1.jpg" alt="JICS 2022" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="inline-block px-3 py-1 bg-yellow-500 text-white text-xs font-semibold rounded-full mb-2">🏆 1º Lugar</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Xadrez Municipal 2022</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                            Jogos Internos de Centenário do Sul
+                        </p>
+                        <a href="./static/img/premios/jics1.jpg" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                            Ver imagem <i class="bi bi-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2023 -->
+                <div class="glass rounded-2xl overflow-hidden card-hover">
+                    <div class="relative h-48">
+                        <img src="./static/img/premios/jics2.jpg" alt="JICS 2023" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="inline-block px-3 py-1 bg-gray-400 text-white text-xs font-semibold rounded-full mb-2">🥈 2º Lugar</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Xadrez Municipal 2023</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                            Jogos Internos de Centenário do Sul
+                        </p>
+                        <a href="./static/img/premios/jics2.jpg" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center nao-imprimir">
+                            Ver imagem <i class="bi bi-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-4 border-t border-gray-200 dark:border-gray-800 nao-imprimir">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+                <!-- Logo -->
+                <div class="text-center md:text-left">
+                    <div class="text-2xl font-bold gradient-text font-mono mb-2">&lt;DMS /&gt;</div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Desenvolvido com ❤️ por Denis Muniz Silva
+                    </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex gap-4">
+                    <a href="https://github.com/denisms7" target="_blank" class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/denisms/" target="_blank" class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=5543991038557" target="_blank" class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                    <a href="index-modern.html" class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all" title="Voltar ao portfólio">
+                        <i class="bi bi-house"></i>
+                    </a>
+                </div>
+
+                <!-- Year -->
+                <div class="text-sm text-gray-600 dark:text-gray-400">
+                    © <span id="id_ano"></span> Denis Muniz Silva
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all nao-imprimir z-40 hover:scale-110">
+        <i class="bi bi-arrow-up text-xl"></i>
+    </a>
+
+    <script src="./static/js/main.js" defer></script>
+
+    <script>
+        // Theme Toggle
+        function CapTheme() {
+            const html = document.documentElement;
+            const currentTheme = localStorage.getItem('tema_dms_portifolio') || 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            if (newTheme === 'dark') {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+
+            localStorage.setItem('tema_dms_portifolio', newTheme);
+            updateThemeIcon(newTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('theme-toggle').querySelector('i');
+            if (theme === 'dark') {
+                icon.className = 'bi bi-sun-fill text-xl';
+            } else {
+                icon.className = 'bi bi-moon-stars-fill text-xl';
+            }
+        }
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem('tema_dms_portifolio') || 'light';
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+        updateThemeIcon(savedTheme);
+
+        // Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Calculate totals
+        document.addEventListener('DOMContentLoaded', function() {
+            calcularTotalCHFormal();
+            calcularTotalCHInformal();
+        });
+    </script>
+
+</body>
+
+</html>
