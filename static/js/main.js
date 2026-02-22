@@ -62,7 +62,9 @@ function changeTheme(theme) {
 
 function calcularTotalCHInformal() {
     const cells = document.querySelectorAll('.ch-informal');
-    let total = 0;
+
+    let totalCH = 0;
+    let totalCertificados = 0;
 
     cells.forEach((cell) => {
         const texto = cell.textContent.trim().replace(',', '.');
@@ -71,11 +73,13 @@ function calcularTotalCHInformal() {
         const ehNumero = /^-?\d+(\.\d+)?$/.test(texto);
 
         if (ehNumero) {
-            total += parseFloat(texto);
+            totalCH += parseFloat(texto);
+            totalCertificados += 1;  // Conta o certificado válido
         }
     });
 
-    document.getElementById('ch-informal-total').textContent = total;
+    document.getElementById('ch-informal-total').textContent = totalCH;
+    document.getElementById('ch-informal-num').textContent = totalCertificados;
 }
 
 document.addEventListener('DOMContentLoaded', calcularTotalCHInformal);
